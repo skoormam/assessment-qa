@@ -1,0 +1,186 @@
+Requirements :
+
+Part-1: Defects for registration page 
+
+
+- Enter chance to win!  - I think "chance" keyword not required here >> Enter To Win!
+- * Astric mark should be in red color for every required fields 
+- Not getting proper expected error message on clicking Submit button without entering any fields(Textboxes)
+- Getting Website status:Risky on hitting below link on chrome browser.
+
+https://blue-bite-dev-3.bluebite.io/04425f7c-4fdd-47f6-85b3-b800d12bb9ca
+
+- Submit button should not be in Enabled(Blue) state if textbox fields are not filled.
+- Error message should include the respective field name like below 
+
+     Actual result : Must be 18 or older to enter.
+     Expected result : Age must be equal to 18 or older to enter. 
+	 
+- Required textboxes color should be in Red color incase of not entered / wrong values / etc after clicking submit button.
+
+
+*************************************************
+
+Submission Confirmed, Surendra
+The winner of the raffle will be managed independently and will be contacted via email. You have registed 1 submissions. 
+
+- Here , comma not required for "Submission Confirmed, Surendra" - should be like Submission Confirmed Surendra
+- "You have registed 1 submissions."  - Here "r" is missing in registed 
+- "You have registed 1 submissions."  - Here submissions shoule be like submission(s)
+
+
+*************************************************
+
+
+Name* : 
+
+- There is no validaton for Name textbox on clicking submit button.
+- Name textbox accepting anything like all special characters and not getting proper expected error message (Getting like : Must be 18 or older to enter.)
+- Name textbox accepting unlimitted characters+special characters etc 
+
+
+Email* :
+
+- There is no validaton for Email textbox on clicking submit button.
+- Email textbox accepting anything like all special characters and not getting error message on clicking submit button
+- Email textbox accepting unlimitted characters+special characters etc 
+
+Age* : 
+
+
+- Age textbox accepting anything like all special characters and not getting proper expected error message (Getting like : Must be 18 or older to enter.)
+- Age textbox accepting unlimitted characters+special characters etc 
+- Age textbox should not accept only spaces without any numaric values
+- Show expected message in textbox in disable mode (Once user entered the name the expected message should disappear)
+
+
+Reason : 
+
+- Provide optional for Reason text like Reason(Optional)
+- Reason textbox accepting anything and not getting proper expected error message on clicking submit button
+- Reason textbox accepting unlimitted characters+special characters etc 
+- Reason textbox should not accept only spaces without any chars
+- Reason textbox should accept only limited words like max 200 words 
+- Show expected message in textbox in disable mode (Once user entered the name the expected message should disappear)
+
+
+
+
+
+
+Test cases :
+
+Part-2:
+- Enter chance to win!  - I think "chance" keyword not required here >> Enter To Win!
+- * Astric mark should be in red color for every required fields 
+- Not getting proper expected error message on clicking Submit button without entering any fields(Textboxes)
+- Verify Website redirection status (should not get risky on hitting below link on chrome browser.
+
+https://blue-bite-dev-3.bluebite.io/04425f7c-4fdd-47f6-85b3-b800d12bb9ca
+
+- Verify UI on loading the page 
+- Text should be in attractive on UI
+- Verify all the textboxes validatons 
+- Verify excepted error message on hitting submit button
+- Verify positive scenarios for all the UI and functional validatons
+- Verify negitive scenarios for all the UI and functional validatons
+- Verify text in all supported languages 
+- Verify request and responses on submission of data 
+- Check the entered data is storing in database on submission
+- Verify the page is loading in all supported browsers on windows & mac devices
+- Verify the page is loading in all supported browsers on all supported mobile devices
+- Verify the page load in case of network turn off 
+- 
+
+- Submit button should not be in Enabled(Blue) state if textbox fields are not filled.
+- Submit button should be enable once the required fields are entered correctly.
+- Error message should include the respective field name like Age 
+- Required textboxes color should be in Red color incase of not entered / wrong values / empty etc after clicking submit button.
+
+Actual result : Must be 18 or older to enter.
+Expected result : Age must be equal to 18 or older to enter.
+
+Name Textbox : 
+
+- Name textbox accepting anything like all special characters and not getting proper expected error message (Getting like : Must be 18 or older to enter.)
+- Name textbox accepting unlimitted characters+special characters etc 
+- Name textbox should not accept only spaces without any characters
+- Name textbox name should accept only limited words like max 80 chars
+- Show expected message in textbox in disable mode (Once user entered the name the expected message should disappear)
+
+Email* :
+
+- There is no validaton for Email textbox on clicking submit button.
+- Email textbox accepting anything like all special characters and not getting error message on clicking submit button
+- Email textbox accepting unlimitted characters+special characters etc 
+- Email textbox should accept only @ with characters
+- Email textbox should accept only valid domain with dot (.com) and with characters
+- Show expected message in textbox in disable mode (Once user entered the name the expected message should disappear)
+- Email textbox should accept Email length upto 20 characters with domain name and @ symbol 
+
+Age* : 
+
+- Age textbox should not accept any characters & special characters
+- Age textbox should accept only numaric values like 1 to 150 
+- Age textbox accepting anything like all special characters and not getting proper expected error message (Getting like : Must be 18 or older to enter.)
+- Age textbox accepting unlimitted characters+special characters etc 
+- Age textbox should not accept only spaces without any numaric values
+- Show expected message in textbox in disable mode (Once user entered the name the expected message should disappear)
+
+
+Reason : 
+
+- Provide optional for Reason text like Reason(Optional)
+- Reason textbox accepting anything and not getting proper expected error message on clicking submit button
+- Reason textbox accepting unlimitted characters+special characters etc 
+- Reason textbox should not accept only spaces without any chars
+- Reason textbox should accept only limited words like max 200 words 
+- Show expected message in textbox in disable mode (Once user entered the name the expected message should disappear)
+
+
+Automation :
+Ceated a script file by using Cypress and attached the file to email for output reference 
+
+Provide instructions on how to run automated tests
+
+Step 1: Set Up Your Project : Initialize Your Project:
+
+If you don't already have a Node.js project, create one by running the following commands in your terminal:
+
+mkdir my-cypress-project
+cd BlueBite
+npm init -y
+Install Cypress:
+
+Install Cypress as a dev dependency:
+
+npm install cypress --save-dev
+Open Cypress:
+
+Open Cypress for the first time to generate the necessary files and folders:
+
+npx cypress open
+
+This will create a cypress folder and a cypress.json configuration file in your project directory.
+Step 2: Write Your Tests and create Test Files
+
+Cypress organizes tests into e2e folder. Create a new test file in cypress/e2e, for example, Enter chance to win.cy:
+
+"describe" :  is used to group related tests.
+"it" : represents an individual test case.
+
+Step 3: Run Your Tests
+Run Tests in the Cypress Test Runner: Open Cypress to use its interactive test runner:
+
+npx cypress open
+
+Select the test file you created to run it in the interactive mode. 
+This mode is useful for debugging and seeing how tests interact with your application in real-time.
+Run Tests in Headless Mode:
+
+To run tests in a headless mode (useful for CI/CD pipelines), use:
+
+npx cypress run
+
+This command will execute all test files in the cypress/e2e folder.
+Step 4: Continuous Integration : Set Up a CI Configuration 
